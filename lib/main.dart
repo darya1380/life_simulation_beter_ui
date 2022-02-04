@@ -26,62 +26,78 @@ class _MyAppState extends State<MyApp> {
           alignment: const Alignment(-.2, 0),
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: NetworkImage("https://i.pinimg.com/originals/74/cb/17/74cb17188e940c3e32909d5c5d96883f.jpg"),
+                image: NetworkImage("https://cdn.wallpapersafari.com/30/91/qGj5Tl.jpg"),
                 fit: BoxFit.cover)
             ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              MaterialButton(
 
-                onPressed: () {},
-                color: Colors.grey[300],
-                textColor: Colors.white,
-                child: Icon(
-                  Icons.shopping_cart_outlined,
-                  size: 24,
-                ),
-                padding: EdgeInsets.all(16),
-                shape: CircleBorder(),
-              ),
-              Builder(
-                builder: (context) {
-                  return MaterialButton(
+          child: Align(
+            alignment: Alignment.topLeft,
+            child: Row(
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    MaterialButton(
 
-                    color: Colors.grey[300],
-                    textColor: Colors.white,
-                    child: Icon(
-                      Icons.account_balance,
-                      size: 24,
+                      onPressed: () {},
+                      color: Colors.pinkAccent,
+                      textColor: Colors.white,
+                      child: Icon(
+                        Icons.account_balance,
+                        size: 24,
+                      ),
+                      padding: EdgeInsets.all(16),
+                      shape: CircleBorder(),
                     ),
-                    padding: EdgeInsets.all(16),
-                    shape: CircleBorder(),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context)=>
-                              const ShoppingPage()
-                          )
-                      );
-                    },
-                  );
-                }
-              ),
-              MaterialButton(
+                    Builder(
+                      builder: (context) {
+                        return MaterialButton(
 
-                onPressed: () {},
-                color: Colors.grey[300],
-                textColor: Colors.white,
-                child: Icon(
-                  Icons.star_rate,
-                  size: 24,
+                          color: Colors.pinkAccent,
+                          textColor: Colors.white,
+                          child: Icon(
+                            Icons.shopping_cart_outlined,
+                            size: 24,
+                          ),
+                          padding: EdgeInsets.all(16),
+                          shape: CircleBorder(),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context)=>
+                                    const ShoppingPage()
+                                )
+                            );
+                          },
+                        );
+                      }
+                    ),
+                    MaterialButton(
+
+                      onPressed: () {},
+                      color: Colors.pinkAccent,
+                      textColor: Colors.white,
+                      child: Icon(
+                        Icons.star_rate,
+                        size: 24,
+                      ),
+                      padding: EdgeInsets.all(16),
+                      shape: CircleBorder(),
+                    ),
+
+
+                  ],
                 ),
-                padding: EdgeInsets.all(16),
-                shape: CircleBorder(),
-              ),
+              Column(
+                children: [
+                  MaterialButton(
+                    onPressed: (){},
+                    //todo inja gharare che etefaghi biofte!
+                  )
+                ],
+              )],
+            ),
 
-
-            ],
           ),
 
 
