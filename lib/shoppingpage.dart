@@ -18,37 +18,51 @@ class ShoppingPage extends StatelessWidget
                     image: NetworkImage("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOiA6ohmPxoYlOt7GVqO0Vut6HR0RXAKt1qw&usqp=CAU"),
                     fit: BoxFit.cover)
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Container(
-                    // margin: const EdgeInsets.all(10),
-                    width: 100, height: 100,
-                    child: FlatButton(onPressed: (){},color: Colors.green, child:
-                    Text('Residential place'), padding: EdgeInsets.only(right: 10),),
+            child: Align(
+              alignment: Alignment.topLeft,
+              child: Column(
+                // mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+
+                  Row(
+                    children: [
+                      Container(
+                          margin: const EdgeInsets.all(10),
+                          width: 100, height: 100,
+                          child: FlatButton(onPressed: (){},color: Colors.green, child:
+                          Text('Residential place'), padding: EdgeInsets.only(right: 10),),
+                        ),
+                      Container(
+
+                          width: 100, height: 100,
+                          child: FlatButton(onPressed: (){}, child: Text("Factory place"), color: Colors.green,
+                            padding: EdgeInsets.only(right: 10),)
+                      ),
+                    ],
                   ),
 
-                Container(
 
-                 width: 100, height: 100,
-                   child: FlatButton(onPressed: (){}, child: Text("Factory place"), color: Colors.green,
-                   padding: EdgeInsets.only(right: 10),)
-               ),
-                Container(
-                  // margin: const EdgeInsets.all(10),
-                  width: 100, height: 100,
-                  child: FlatButton(
-                    onPressed: (){}, child: Text("Park"), color: Colors.green,
+                  Row(
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.all(10),
+                        width: 100, height: 100,
+                        child: FlatButton(
+                          onPressed: (){}, child: Text("Park"), color: Colors.green,
+                        ),
+                      ),
+                      Container(
+                        width: 100, height: 100,
+                        child: FlatButton(
+                          onPressed: (){}, child: Text("Soldier room"), color: Colors.green,
+                        ),
+                      ),
+                    ],
                   ),
-                ),
 
-                     Container(
-                      width: 100, height: 100,
-                      child: FlatButton(
-                  onPressed: (){}, child: Text("Soldier room"), color: Colors.green,
-                ),
-                    ),
-              ],
+
+                ],
+              ),
             )
         )
     );
