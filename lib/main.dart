@@ -46,8 +46,8 @@ class _MyAppState extends State<MyApp> {
                         Icons.account_balance,
                         size: 24,
                       ),
-                      padding: EdgeInsets.all(16),
-                      shape: CircleBorder(),
+                      padding: const EdgeInsets.all(16),
+                      shape: const CircleBorder(),
                     ),
                     Builder(
                       builder: (context) {
@@ -59,8 +59,8 @@ class _MyAppState extends State<MyApp> {
                             Icons.shopping_cart_outlined,
                             size: 24,
                           ),
-                          padding: EdgeInsets.all(16),
-                          shape: CircleBorder(),
+                          padding: const EdgeInsets.all(16),
+                          shape: const CircleBorder(),
                           onPressed: () {
                             Navigator.push(
                                 context,
@@ -81,8 +81,8 @@ class _MyAppState extends State<MyApp> {
                         Icons.star_rate,
                         size: 24,
                       ),
-                      padding: EdgeInsets.all(16),
-                      shape: CircleBorder(),
+                      padding: const EdgeInsets.all(16),
+                      shape: const CircleBorder(),
                     ),
 
 
