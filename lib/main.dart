@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'GovernmentPage.dart';
 import 'shoppingpage.dart';
 import 'dart:ui';
 void main() => runApp(const MyApp());
@@ -22,6 +23,7 @@ class _MyAppState extends State<MyApp> {
         // appBar: AppBar(
         //   title: Text(title),
         // ),
+
         body: Container(
           alignment: const Alignment(-.2, 0),
           decoration: const BoxDecoration(
@@ -37,17 +39,24 @@ class _MyAppState extends State<MyApp> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    MaterialButton(
+                    Builder(
+                      builder: (context) {
+                        return MaterialButton(
 
-                      onPressed: () {},
-                      color: Colors.pinkAccent,
-                      textColor: Colors.white,
-                      child: Icon(
-                        Icons.account_balance,
-                        size: 24,
-                      ),
-                      padding: const EdgeInsets.all(16),
-                      shape: const CircleBorder(),
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>
+                            GovernmentPage()));
+                          },
+                          color: Colors.pinkAccent,
+                          textColor: Colors.white,
+                          child: Icon(
+                            Icons.account_balance,
+                            size: 24,
+                          ),
+                          padding: const EdgeInsets.all(16),
+                          shape: CircleBorder(),
+                        );
+                      }
                     ),
                     Builder(
                       builder: (context) {
@@ -60,13 +69,14 @@ class _MyAppState extends State<MyApp> {
                             size: 24,
                           ),
                           padding: const EdgeInsets.all(16),
-                          shape: const CircleBorder(),
+                          shape: CircleBorder(),
                           onPressed: () {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(builder: (context)=>
                                     const ShoppingPage()
                                 )
+
                             );
                           },
                         );
@@ -81,8 +91,8 @@ class _MyAppState extends State<MyApp> {
                         Icons.star_rate,
                         size: 24,
                       ),
-                      padding: const EdgeInsets.all(16),
-                      shape: const CircleBorder(),
+                      padding: EdgeInsets.all(16),
+                      shape: CircleBorder(),
                     ),
 
 

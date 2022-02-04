@@ -10,6 +10,8 @@ class ShoppingPage extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    var w = 75.0;
+    var h = 75.0;
     return Scaffold(
         body: Container(
             alignment: const Alignment(-.2, 0),
@@ -28,16 +30,25 @@ class ShoppingPage extends StatelessWidget
                     children: [
                       Container(
                           margin: const EdgeInsets.all(10),
-                          width: 100, height: 100,
+                          width: w, height: h,
                           child: FlatButton(onPressed: (){},color: Colors.green, child:
                           Text('Residential place'), padding: EdgeInsets.only(right: 10),),
                         ),
                       Container(
 
-                          width: 100, height: 100,
+                          width: w, height: h,
                           child: FlatButton(onPressed: (){}, child: Text("Factory place"), color: Colors.green,
                             padding: EdgeInsets.only(right: 10),)
                       ),
+                      Container(
+                        width: w, height: h,
+                        child: FlatButton(onPressed: (){
+                          Navigator.pop(context);
+                        }, child: Text('go back'),
+                          color: Colors.green,
+                          padding: EdgeInsets.all(10),
+                        ),
+                      )
                     ],
                   ),
 
@@ -46,15 +57,17 @@ class ShoppingPage extends StatelessWidget
                     children: [
                       Container(
                         margin: const EdgeInsets.all(10),
-                        width: 100, height: 100,
+                        width: w, height: h,
                         child: FlatButton(
                           onPressed: (){}, child: Text("Park"), color: Colors.green,
+                          padding: EdgeInsets.all(10),
                         ),
                       ),
                       Container(
-                        width: 100, height: 100,
+                        width: w, height: h,
                         child: FlatButton(
                           onPressed: (){}, child: Text("Soldier room"), color: Colors.green,
+                          padding: EdgeInsets.all(10),
                         ),
                       ),
                     ],
