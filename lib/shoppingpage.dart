@@ -19,8 +19,35 @@ class ShoppingPage extends StatelessWidget
                     fit: BoxFit.cover)
             ),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text("hello world")
+                Container(
+                    // margin: const EdgeInsets.all(10),
+                    width: 100, height: 100,
+                    child: FlatButton(onPressed: (){},color: Colors.green, child:
+                    Text('Residential place'), padding: EdgeInsets.only(right: 10),),
+                  ),
+
+                Container(
+
+                 width: 100, height: 100,
+                   child: FlatButton(onPressed: (){}, child: Text("Factory place"), color: Colors.green,
+                   padding: EdgeInsets.only(right: 10),)
+               ),
+                Container(
+                  // margin: const EdgeInsets.all(10),
+                  width: 100, height: 100,
+                  child: FlatButton(
+                    onPressed: (){}, child: Text("Park"), color: Colors.green,
+                  ),
+                ),
+
+                     Container(
+                      width: 100, height: 100,
+                      child: FlatButton(
+                  onPressed: (){}, child: Text("Soldier room"), color: Colors.green,
+                ),
+                    ),
               ],
             )
         )
