@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'GovernmentPage.dart';
+import 'RatingPage.dart';
 import 'shoppingpage.dart';
 import 'dart:ui';
 void main() => runApp(const MyApp());
@@ -82,19 +83,51 @@ class _MyAppState extends State<MyApp> {
                         );
                       }
                     ),
-                    MaterialButton(
+                    // Builder(
+                    //   builder: (context) {
+                    //     return MaterialButton(
+                    //
+                    //       onPressed: () {
+                    //         Navigator.push(
+                    //             context,
+                    //             MaterialPageRoute(builder: (context)=>
+                    //         const ShoppingPage()
+                    //         )
+                    //       },
+                    //       color: Colors.pinkAccent,
+                    //       textColor: Colors.white,
+                    //       child: Icon(
+                    //         Icons.star_rate,
+                    //         size: 24,
+                    //       ),
+                    //       padding: EdgeInsets.all(16),
+                    //       shape: CircleBorder(),
+                    //     );
+                    //   }
+                    // ),
+                    Builder(
+                        builder: (context) {
+                          return MaterialButton(
 
-                      onPressed: () {},
-                      color: Colors.pinkAccent,
-                      textColor: Colors.white,
-                      child: Icon(
-                        Icons.star_rate,
-                        size: 24,
-                      ),
-                      padding: EdgeInsets.all(16),
-                      shape: CircleBorder(),
-                    ),
+                            color: Colors.pinkAccent,
+                            textColor: Colors.white,
+                            child: Icon(Icons.star,
+                              size: 24,
+                            ),
+                            padding: const EdgeInsets.all(16),
+                            shape: CircleBorder(),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context)=>
+                                  RatingPage()
+                                  )
 
+                              );
+                            },
+                          );
+                        }
+                    )
 
                   ],
                 ),
